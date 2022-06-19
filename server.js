@@ -7,4 +7,3 @@ app.get("/",(req,res)=>{
 app.listen(PORT,() => {
     console.log(`APP Started on : ${PORT}`);
 })
-console.log("DENEME");
