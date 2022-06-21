@@ -8,7 +8,7 @@ dotenv.config({
 const app = express()
 const PORT = process.env.PORT
 app.get("/",(req,res)=>{
-    res.send("<h1>Hello Question Answer API<h1>")
+    res.send("Hello Question Answer API")
 })
 app.listen(PORT,() => {
     console.log(`APP Started on : ${PORT}: ${process.env.NODE_ENV}` );
