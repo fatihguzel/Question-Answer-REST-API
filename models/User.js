@@ -12,7 +12,7 @@ const UserSchema = new Schema({
         type : String,
         required : true,
         unique : [true,"Please try different email"],
-        match : [
+        match : [ // email eşleştirme @gmail.com formatında gibi
             /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
             "Please provide a valid email"
         ]
@@ -20,7 +20,7 @@ const UserSchema = new Schema({
     role: {
         type : String,
         default : "user",
-        enum : ["user","admin"]
+        enum : ["user","admin"],  
     },
     password : {
         type : String,
@@ -84,4 +84,4 @@ UserSchema.pre("save",function(next){
   
 
 })
-module.exports = mongoose.model("User",UserSchema)
+module.exports = mongoose.model("Question-Answer",UserSchema)
