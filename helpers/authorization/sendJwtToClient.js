@@ -2,6 +2,7 @@ const sendJwtToClient = (user,res) => {
     // Generate JWT 
     const token = user.generateJwtFromUser()
     const{JWT_COOKIE,NODE_ENV} = process.env
+
     return res
     .status(200)
     .cookie("access_token",token,{
@@ -18,5 +19,6 @@ const sendJwtToClient = (user,res) => {
         }
     })
     // Response
+    
 }
 module.exports = sendJwtToClient

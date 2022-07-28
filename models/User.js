@@ -11,7 +11,7 @@ const UserSchema = new Schema({
     email : {
         type : String,
         required : true,
-        unique : [true,"Please try different email"],
+        unique : [true],
         match : [ // email eşleştirme @gmail.com formatında gibi
             /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
             "Please provide a valid email"
